@@ -5,15 +5,111 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Profile Clone</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 </head>
 <body>
     <div id="app">
         <nav class="navbar">
-           
+            <div class="navbar-web-wrapper">
+                <a href="#" class="navbar-brand desktop">
+                    <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                </a>
+                <a href="#" class="navbar-toggler">
+                    <span class="iconify" data-icon="octicon:three-bars-16" data-inline="false"></span>
+                </a>
+                <form action="#" class="navbar-form web">
+                    <label for="search">
+                        <input type="search" name="search" id="search" placeholder="Search or jump to">
+                        <span class="icon">
+                            <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="icon">
+                        </span>
+                    </label>
+                </form>
+                <div class="navbar-menu">
+                    <ul class="navbar-menu-main">
+                        <li class="nav-item">
+                            <a href="#">Pull request</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Issues</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Market place</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Explore</a>
+                        </li>
+                       
+                    </ul>
+                </div>
+                <a href="#" class="navbar-brand mobile">
+                    <svg class="octicon octicon-mark-github v-align-middle" height="32" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                </a>
+                <div class="navbar-icon-menu">
+                    <a href="#" class="item navbar-icon-menu-notification"><span class="iconify" data-icon="octicon:bell-16" data-inline="false"></span></a>
+                    <a href="#" class="item navbar-icon-menu-add">
+                        <span class="iconify" data-icon="octicon:plus-16" data-inline="false"></span>
+                        <span class="iconify" data-icon="octicon:triangle-down-16" data-inline="false"></span>
+                    </a>
+                    <a href="#" class="item navbar-icon-menu-profile">
+                        <div class="img-avatar img-avatar-tiny">
+                            <img src="https://avatars1.githubusercontent.com/u/31973759?s=60&v=4" alt="profile avatar" height="20">
+                        </div>
+                        <span class="iconify" data-icon="octicon:triangle-down-16" data-inline="false"></span>
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="navbar-mobile-wrapper">
+                <div class="navbar-menu">
+                    <form action="#" class="navbar-form mobile">
+                        <label for="search">
+                            <input type="search" name="search" id="search" placeholder="Search or jump to">
+                            <span class="icon">
+                                <img src="https://github.githubassets.com/images/search-key-slash.svg" alt="icon">
+                            </span>
+                        </label>
+                    </form>
+                    <ul class="navbar-menu-main">
+                        <li class="nav-item">
+                            <a href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Pull request</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Issues</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Market place</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Explore</a>
+                        </li>
+                        <li class="nav-item with-profile">
+                            <a href="#" class="holder">
+                                <div class="img-avatar img-avatar-tiny">
+                                    <img src="https://avatars1.githubusercontent.com/u/31973759?s=60&v=4" alt="profile avatar" height="20">
+                                </div>
+                                <span class="name">Solomon Eyitene</span>
+                            </a>
+                        </li>
+                        <li class="nav-item with-profile">
+                            <a href="#" class="holder">
+                               <span class="icon"><span class="iconify" data-icon="octicon:sign-out-16" data-inline="false"></span></span>
+                                <span class="name">Sign out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
         </nav>
 
         <main class="main">
-            Main
+            <div class="container">
+                <h3>Solomon Eyitene</h3>
+            </div>
         </main>
     </div>
 
