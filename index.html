@@ -47,16 +47,64 @@
                 </a>
                 <div class="navbar-icon-menu">
                     <a href="#" class="item navbar-icon-menu-notification"><span class="iconify" data-icon="octicon:bell-16" data-inline="false"></span></a>
-                    <a href="#" class="item navbar-icon-menu-add">
-                        <span class="iconify" data-icon="octicon:plus-16" data-inline="false"></span>
-                        <span class="iconify" data-icon="octicon:triangle-down-16" data-inline="false"></span>
-                    </a>
-                    <a href="#" class="item navbar-icon-menu-profile">
-                        <div class="img-avatar img-avatar-tiny">
-                            <img src="https://avatars1.githubusercontent.com/u/31973759?s=60&v=4" alt="profile avatar" height="20">
+                    <div class="dropdown">
+                        <a href="#" class="item navbar-icon-menu-add dropdown-toggle">
+                            <span class="iconify" data-icon="octicon:plus-16" data-inline="false"></span>
+                            <span class="iconify" data-icon="octicon:triangle-down-16" data-inline="false"></span>
+                        </a>
+
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">New repository</a>
+                            <a href="#" class="dropdown-item">Import repository</a>
+                            <a href="#" class="dropdown-item">New gist</a>
+                            <a href="#" class="dropdown-item">New Organization</a>
+                            <a href="#" class="dropdown-item">New Organization</a>
+                         
                         </div>
-                        <span class="iconify" data-icon="octicon:triangle-down-16" data-inline="false"></span>
-                    </a>
+                    </div>
+                    <div class="dropdown">
+                        <a href="#" class="item navbar-icon-menu-profile dropdown-toggle">
+                            <div class="img-avatar img-avatar-tiny">
+                                <img src="https://avatars1.githubusercontent.com/u/31973759?s=60&v=4" alt="profile avatar" height="20">
+                            </div>
+                            <span class="iconify" data-icon="octicon:triangle-down-16" data-inline="false"></span>
+                        </a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-divider">
+                                <div class="text">Signed in as <strong>Solinkz</strong></div>
+                            </div>
+                            <div class="dropdown-divider">
+                                <div class="text">
+                                    <a href="#" class="set-status">
+                                        <span class="icon"><span class="iconify" data-icon="octicon:smiley-24" data-inline="false"></span></span>
+                                        <span>Set status</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="dropdown-divider">
+
+                                <a href="#" class="dropdown-item">Your profile</a>
+                                <a href="#" class="dropdown-item">Your repositories</a>
+                                <a href="#" class="dropdown-item">Your organizations</a>
+                                <a href="#" class="dropdown-item">Your projects</a>
+                                <a href="#" class="dropdown-item">Your stars</a>
+                                <a href="#" class="dropdown-item">Your gists</a>
+                            </div>
+                            <div class="dropdown-divider">
+
+                                <a href="#" class="dropdown-item">Upgrade</a>
+                                <a href="#" class="dropdown-item">Featured preview</a>
+                                <a href="#" class="dropdown-item">Help</a>
+                                <a href="#" class="dropdown-item">Settings</a>
+                                <a href="#" class="dropdown-item">Sign out</a>
+                                
+                            </div>
+
+                          
+                         
+                        </div>
+                    </div>
                     
                 </div>
             </div>
@@ -113,6 +161,7 @@
         </main>
     </div>
 
+    <div class="dropdown-overlay"></div>
     <script src="js/main.js"></script>
 </body>
 </html>

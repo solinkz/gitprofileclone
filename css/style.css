@@ -63,6 +63,72 @@ a {
     .btn-primary:hover, .btn-primary:active {
       transform: translateY(-0.2rem); }
 
+.dropdown {
+  position: relative; }
+  .dropdown-overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: none; }
+    .dropdown-overlay.show {
+      display: block; }
+  .dropdown-menu {
+    width: 12rem;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(36, 41, 46, 0.15);
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #ffffff;
+    box-shadow: 0 1rem 2rem rgba(34, 34, 34, 0.1);
+    padding: .5rem 0;
+    display: none; }
+    .dropdown-menu.show {
+      display: block;
+      z-index: 4; }
+    .dropdown-menu::before {
+      content: " ";
+      position: absolute;
+      bottom: 100%;
+      /* At the top of the tooltip */
+      left: 80%;
+      margin-left: -5px;
+      border-width: 8px;
+      border-style: solid;
+      border-color: transparent transparent #ffffff transparent; }
+  .dropdown-divider {
+    padding: 4px 0; }
+    .dropdown-divider:not(:last-child) {
+      border-bottom: 1px solid rgba(36, 41, 46, 0.15); }
+  .dropdown a.dropdown-item {
+    width: 100%;
+    display: block;
+    color: rgba(36, 41, 46, 0.8);
+    padding: .5rem 1rem;
+    font-size: 14px; }
+    .dropdown a.dropdown-item:hover {
+      background-color: #0366d6; }
+  .dropdown .text {
+    color: #24292e;
+    font-size: .9rem;
+    padding: .5rem 1rem; }
+    .dropdown .text a.set-status {
+      padding: .5rem;
+      display: flex;
+      align-items: center;
+      border-radius: calc(0.5rem /2);
+      border: 1px solid rgba(36, 41, 46, 0.15);
+      color: rgba(36, 41, 46, 0.8); }
+      .dropdown .text a.set-status:hover {
+        color: #0366d6; }
+      .dropdown .text a.set-status .icon {
+        line-height: 1;
+        display: block;
+        margin-right: .5rem; }
+
 .header {
   background-color: #2ea44f; }
   .header-content {
@@ -114,7 +180,7 @@ form > button[type=submit] {
   margin-top: 3rem; }
 
 .navbar {
-  padding: .5rem  1.2rem;
+  padding: 0  1.2rem;
   background-color: #24292e;
   width: 100%; }
   .navbar-web-wrapper, .navbar-mobile-wrapper {
@@ -125,7 +191,7 @@ form > button[type=submit] {
     justify-content: space-between; }
     @media (min-width: 48em) {
       .navbar-web-wrapper, .navbar-mobile-wrapper {
-        padding: .5rem  2rem;
+        padding: 4px  2rem;
         justify-content: flex-start; } }
   .navbar-mobile-wrapper {
     display: none; }
@@ -136,6 +202,8 @@ form > button[type=submit] {
     @media (min-width: 48em) {
       .navbar-web-wrapper .navbar-menu, .navbar-web-wrapper .navbar-menu-main {
         display: flex; } }
+  .navbar-mobile-wrapper .navbar-menu {
+    padding-bottom: 1rem; }
   .navbar-mobile-wrapper .navbar-menu-main {
     display: block; }
     @media (min-width: 48em) {
@@ -184,7 +252,7 @@ form > button[type=submit] {
       border: 1px solid #444d56;
       padding: .5rem;
       background-color: transparent;
-      width: 18rem;
+      width: 100%;
       font-size: .9rem;
       font-weight: 400;
       transition: all .3s;
@@ -193,14 +261,20 @@ form > button[type=submit] {
       color: rgba(255, 255, 255, 0.7); }
       .navbar-form input::placeholder {
         color: rgba(255, 255, 255, 0.7); }
+      @media (min-width: 48em) {
+        .navbar-form input {
+          width: 18rem; } }
       .navbar-form input:focus {
         border: none;
         background-color: white;
         color: #24292e;
         outline: none;
-        width: 25rem; }
+        width: 100%; }
         .navbar-form input:focus::placeholder {
           color: rgba(36, 41, 46, 0.7); }
+        @media (min-width: 48em) {
+          .navbar-form input:focus {
+            width: 25rem; } }
         .navbar-form input:focus .navbar-form .icon {
           display: none; }
     .navbar-form .icon {
@@ -233,12 +307,13 @@ form > button[type=submit] {
           border-top: 1px solid rgba(255, 255, 255, 0.15);
           color: rgba(255, 255, 255, 0.9);
           display: block;
-          padding: 1rem 0;
+          padding: .7rem 0;
           font-size: .9rem;
           font-weight: 600; }
           @media (min-width: 48em) {
             .navbar-menu-main li a {
-              border-top: none; } }
+              border-top: none;
+              padding: .5rem 0; } }
           .navbar-menu-main li a:hover {
             color: rgba(255, 255, 255, 0.5); }
           .navbar-menu-main li a.holder {
@@ -255,7 +330,7 @@ form > button[type=submit] {
       .navbar-icon-menu a:hover {
         color: rgba(255, 255, 255, 0.7); }
       .navbar-icon-menu a:not(:last-child) {
-        margin-right: .7rem; }
+        margin-right: 1rem; }
     .navbar-icon-menu-profile {
       display: none; }
       @media (min-width: 48em) {
