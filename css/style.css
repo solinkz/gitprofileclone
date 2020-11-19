@@ -51,9 +51,15 @@ a {
 .btn {
   border: 0;
   background-color: #fafafa;
-  padding: 1rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 0.5rem;
-  font-size: 1rem; }
+  font-size: 1rem;
+  display: inline-block;
+  border: 1px solid rgba(36, 41, 46, 0.05);
+  font-size: .9rem;
+  transition: all .3s; }
+  .btn:hover {
+    background-color: #f0f0f0; }
   .btn-primary {
     position: relative;
     display: block;
@@ -62,6 +68,10 @@ a {
     transition: all .2s; }
     .btn-primary:hover, .btn-primary:active {
       transform: translateY(-0.2rem); }
+  .btn-as-block {
+    display: block;
+    width: 100%;
+    text-align: center; }
 
 .dropdown {
   position: relative; }
@@ -138,9 +148,32 @@ a {
 
 .subnav {
   margin-top: 1.5rem;
-  border-bottom: 1px solid rgba(36, 41, 46, 0.1); }
+  border-bottom: 1px solid rgba(36, 41, 46, 0.1);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff; }
+  .subnav.upped {
+    z-index: 10; }
   .subnav .flex-row.subnav-wrapper {
-    justify-content: flex-end; }
+    justify-content: flex-end;
+    align-items: center; }
+  .subnav-profile {
+    display: none; }
+    .subnav-profile .name {
+      display: inline-block;
+      margin-left: 1rem;
+      line-height: 1;
+      font-weight: 600;
+      color: #24292e; }
+    .subnav-profile.active {
+      display: none;
+      align-items: center; }
+      @media (min-width: 48em) {
+        .subnav-profile.active {
+          display: flex;
+          flex: 30% 0 1; } }
   .subnav-menu {
     display: flex;
     flex: 100%;
@@ -148,6 +181,7 @@ a {
     overflow-x: scroll; }
     @media (min-width: 48em) {
       .subnav-menu {
+        overflow-x: hidden;
         flex: 75% 0 1; } }
     .subnav-menu li.subnav-item:hover a {
       border-bottom: 1px solid rgba(36, 41, 46, 0.3); }
@@ -218,6 +252,91 @@ a {
         width: 70%;
         margin: 0 auto;
         margin-bottom: 3rem; } }
+
+.img-avatar {
+  border-radius: 50%;
+  overflow: hidden; }
+  .img-avatar img {
+    width: 100%; }
+  .img-avatar-md {
+    width: 30px;
+    height: 30px; }
+  .img-avatar-tiny {
+    width: 20px;
+    height: 20px; }
+  .img-avatar-lg {
+    width: 260px;
+    height: 260px; }
+
+.main-content {
+  display: flex; }
+  .main-content .profile-section {
+    flex: 25% 0 1;
+    margin-top: -2rem;
+    position: relative;
+    padding: 0 1rem; }
+  .main-content .profile-avatar {
+    position: relative; }
+    .main-content .profile-avatar .img-avatar {
+      margin: 0; }
+    .main-content .profile-avatar .set-status {
+      position: absolute;
+      bottom: 2rem;
+      right: 0;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 20px;
+      color: #24292e;
+      background-color: #ffffff;
+      border: 1px solid rgba(36, 41, 46, 0.1); }
+      .main-content .profile-avatar .set-status .label {
+        display: none;
+        font-size: .8rem; }
+      .main-content .profile-avatar .set-status:hover {
+        width: auto;
+        padding: 0 1rem;
+        right: -75px;
+        color: #0366d6;
+        box-shadow: 0 4px 0.5rem rgba(36, 41, 46, 0.05); }
+        .main-content .profile-avatar .set-status:hover .label {
+          display: inline-block; }
+        .main-content .profile-avatar .set-status:hover .icon {
+          display: inline-block;
+          margin-right: .5rem;
+          line-height: 1; }
+  .main-content .profile-name {
+    color: #24292e;
+    margin: .5rem 0; }
+    .main-content .profile-name span {
+      display: block; }
+    .main-content .profile-name span.fullname {
+      font-weight: 500; }
+    .main-content .profile-name span.username {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: rgba(36, 41, 46, 0.7); }
+  .main-content .profile-edit {
+    margin: 1rem 0; }
+  .main-content .profile-follow {
+    display: flex;
+    align-items: center;
+    color: rgba(36, 41, 46, 0.9); }
+    .main-content .profile-follow .icon {
+      line-height: 1;
+      margin-right: 6px; }
+    .main-content .profile-follow-item {
+      display: flex;
+      align-items: center; }
+  .main-content .profile-divider {
+    padding: 1rem 0; }
+    .main-content .profile-divider h4 {
+      margin-bottom: 1rem;
+      color: #24292e; }
+    .main-content .profile-divider:not(:last-child) {
+      border-bottom: 1px solid rgba(36, 41, 46, 0.1); }
 
 .form-group {
   display: block;

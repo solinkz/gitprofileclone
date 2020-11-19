@@ -4,6 +4,8 @@ window.addEventListener('load', function(){
     const label = document.querySelector('.navbar-form label');
     const dropDowns = document.querySelectorAll('.dropdown');
     const dropOverlay = document.querySelector('.dropdown-overlay');
+    const subnavProfile =   document.querySelector('.subnav-profile');
+    const subnav =   document.querySelector('.subnav');
     dropOverlay.addEventListener('click', function(){
         disableDropDowns();
     });
@@ -29,4 +31,18 @@ window.addEventListener('load', function(){
     navToggler.addEventListener('click', function(){
         mobileMenu.classList.toggle('show');
     })
+
+
+    window.addEventListener("scroll", function() {
+        var top = this.scrollY;
+        if(top > 312){
+            subnavProfile.classList.add('active');
+            subnav.classList.add('upped');
+            // console.log('done');
+        }else{
+            subnav.classList.remove('upped');
+            subnavProfile.classList.remove('active');
+
+        }
+    });
 });
